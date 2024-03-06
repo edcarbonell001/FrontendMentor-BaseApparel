@@ -1,0 +1,227 @@
+/* Importing the font from Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap');
+
+/* Defining the root colors */
+:root {
+  --crimson: hsl(0, 93%, 68%);
+  --salmon: hsl(0, 36%, 70%);
+  --ebony: hsl(0, 6%, 24%);
+}
+
+/* Applying a universal box model */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling the body */
+body {
+  background: url('./images/bg-pattern-desktop.svg'),
+    linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  background-size: inherit;
+  background-position-x: 8rem;
+  font-size: 16px;
+  font-family: 'Josefin Sans', sans-serif;
+  height: 100vh;
+  min-height: 100vh;
+}
+
+/* Flex display classes */
+.d-flex {
+  display: flex !important;
+}
+
+.d-flex-inline {
+  display: inline-flex !important;
+}
+
+/* Container class */
+.container {
+  padding: 0 12rem;
+  max-width: 55%;
+  height: auto;
+}
+
+/* Logo class */
+.logo {
+  margin-top: 3rem;
+}
+
+/* Image container class */
+.image-container {
+  height: 100vh;
+  float: right;
+}
+
+/* Hero images for desktop and mobile */
+.image-container img.hero-desktop {
+  height: 100%;
+}
+
+.image-container img.hero-mobile {
+  display: none;
+}
+
+/* Content class */
+.content {
+  margin-top: 5.5rem;
+}
+
+/* Heading styles */
+.content h1 {
+  color: var(--ebony);
+  font-family: inherit;
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  line-height: 3.5rem;
+}
+
+/* Heading span styles */
+.content h1 span {
+  display: block;
+}
+
+.content h1 span.text-pink {
+  color: var(--salmon);
+  font-weight: 300;
+}
+
+/* Paragraph styles */
+.content p {
+  color: var(--salmon);
+  line-height: 1.8rem;
+  margin-top: 1.2rem;
+}
+
+/* Form group styles */
+.form-group {
+  margin-top: 2.5rem;
+  height: 3rem;
+  position: relative;
+}
+
+/* Input field styles */
+.form-group input {
+  border: 1px solid var(--salmon);
+  border-radius: 2rem;
+  color: var(--salmon);
+  padding: 0.2rem 1.5rem;
+  height: 100%;
+  width: 100%;
+}
+
+/* Button styles */
+.form-group button {
+  background: linear-gradient(90deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border: 0;
+  border-radius: 2rem;
+  box-shadow: 0 5px 20px 3px hsl(0, 80%, 86%);
+  position: absolute;
+  height: 100%;
+  width: 5rem;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+/* Placeholder styles */
+input::placeholder {
+  color: var(--salmon);
+}
+
+/* Focus styles */
+input:focus,
+button:focus {
+  outline: none;
+}
+
+/* Error text styles */
+.text-error {
+  color: var(--crimson) !important;
+  margin: 0;
+  margin-top: 0.5rem !important;
+  margin-left: 1rem;
+  text-align: left;
+}
+
+/* Success text styles */
+.text-success {
+  color: #44d838 !important;
+  margin: 0;
+  margin-top: 0.5rem !important;
+  margin-left: 1rem;
+  text-align: left;
+}
+
+/* Error icon styles */
+.icon-error {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5.8rem;
+  display: none;
+}
+
+/*
+* MOBILE SITE
+*/
+
+/* Media query for mobile site */
+@media screen and (max-width: 1020px) {
+  /* Body styles for mobile */
+  body {
+    background-color: var(--ebony);
+  }
+
+  /* Clear fix class */
+  .clear-fix {
+    clear: both;
+  }
+
+  /* Container styles for mobile */
+  .container {
+    margin: 0;
+    height: auto;
+    min-width: 100%;
+    padding: 0 1rem;
+  }
+
+  /* Logo styles for mobile */
+  .logo {
+    margin: 2rem 0;
+  }
+
+  /* Image container styles for mobile */
+  .image-container {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Hero image styles for mobile */
+  .image-container img.hero-desktop {
+    display: none;
+  }
+
+  .image-container img.hero-mobile {
+    display: block;
+    width: 100%;
+  }
+
+  /* Content styles for mobile */
+  .content {
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 5rem 1rem;
+    text-align: center;
+  }
+
+  /* Heading styles for mobile */
+  .content h1 {
+    font-size: 2.5rem;
+  }
+}
